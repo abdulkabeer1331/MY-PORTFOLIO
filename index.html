@@ -292,7 +292,29 @@ Let's connect and create something amazing together</p>
   </div>
 
   <!-- footer end here -->
-
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+  </script>
+  <script>
+    document.addEventListener('keydown', function (e) {
+      // Ctrl+U, Ctrl+S, Ctrl+Shift+I, F12, Ctrl+Shift+C
+      if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c' || e.key === 'i')) {
+        e.preventDefault();
+      }
+      if (e.key === 'F12') {
+        e.preventDefault();
+      }
+    });
+  </script>
+  <style>
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  </style>
+      
   <script src="bootstrap.js"></script>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="app.js"></script>
